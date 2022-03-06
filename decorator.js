@@ -22,6 +22,14 @@ class Tesla extends Car {
 		this.model = 'Tesla';
 	}
 }
+class Audi extends Car {
+
+	constructor() {
+		super();
+		this.price = 20000;
+		this.model = 'Audi';
+	}
+}
 
 class Autopilot {
 	constructor(car) {
@@ -50,3 +58,19 @@ class Parktronic {
 		return `${this.car.getDescription()} with parktronic`;
 	}
 }
+
+
+let tesla= new Tesla()
+tesla = new  Autopilot(tesla)
+tesla = new  Parktronic(tesla)
+console.log(tesla.getPrice(),tesla.getDescription());
+
+// let tesla= new Tesla()
+// tesla = new  Autopilot(tesla)
+// console.log(tesla.getPrice(),tesla.getDescription());
+
+let audi= new Audi()
+audi = new  Autopilot(audi)
+
+console.log(audi.getPrice(),audi.getDescription());
+
